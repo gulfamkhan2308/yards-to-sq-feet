@@ -1,13 +1,11 @@
-document.getElementById('convertButton').addEventListener('click', () => {
-    const yardsInput = parseFloat(document.getElementById('yardsInput').value);
-    if (!isNaN(yardsInput)) {
-        const squareFeet = yardsToSquareFeet(yardsInput);
-        document.getElementById('result').textContent = `${yardsInput} yards is equal to ${squareFeet} square feet.`;
-    } else {
-        document.getElementById('result').textContent = 'Please enter a valid number of yards.';
-    }
-});
+function yard(event){
+console.log("Button Active");
+event.preventDefault();
 
-function yardsToSquareFeet(yards) {
-    return Math.pow(yards * 3, 2);
+let inp= document.querySelector("#yardsInput").value;
+let result = inp*9;
+let message= "This is your :---- "+ result;
+document.querySelector("#Show").innerHTML= message;
+
+
 }
